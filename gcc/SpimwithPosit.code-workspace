@@ -1,0 +1,92 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../spim-test"
+		},
+		{
+			"path": "../../../universal"
+		},
+		{
+			"path": "../../../posit-test"
+		},
+		{
+			"path": "../../../x86_64-linux-test"
+		},
+		{
+			"path": "../../../gmp-6.2.1"
+		},
+		{
+			"path": "../../../gmp-test"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.md": "lisp",
+			"*.def": "c",
+			"string_view": "c",
+			"rope": "c",
+			"regex": "c",
+			"*.x": "cpp",
+			"*.inc": "c",
+			"cstring": "c",
+			"crash38.C": "cpp",
+			"local_atomic": "cpp",
+			"hash_map": "cpp",
+			"hash_set": "cpp",
+			"strstream": "cpp",
+			"*.tcc": "cpp",
+			"cstddef": "cpp",
+			"cstdio": "cpp",
+			"cwchar": "cpp",
+			"array": "cpp",
+			"bitset": "cpp",
+			"vector": "cpp",
+			"buffer": "cpp",
+			"functional": "cpp",
+			"internet": "cpp",
+			"io_context": "cpp",
+			"memory": "cpp",
+			"memory_resource": "cpp",
+			"optional": "cpp",
+			"propagate_const": "cpp",
+			"socket": "cpp",
+			"timer": "cpp",
+			"tuple": "cpp",
+			"type_traits": "cpp",
+			"random": "cpp",
+			"slist": "cpp",
+			"atomic": "cpp",
+			"charconv": "cpp",
+			"codecvt": "cpp",
+			"fstream": "cpp",
+			"scoped_allocator": "cpp",
+			"stdexcept": "cpp",
+			"string": "cpp",
+			"system_error": "cpp",
+			"thread": "cpp",
+			"typeindex": "cpp",
+			"utility": "cpp",
+			"valarray": "cpp",
+			"variant": "cpp",
+			"dynamic_bitset": "cpp",
+			"ratio": "cpp",
+			"initializer_list": "cpp",
+			"new": "cpp",
+			"typeinfo": "cpp",
+			"cmath": "c",
+			"complex": "c",
+			"bit": "c",
+			"areal": "cpp",
+			"bfloat": "cpp",
+			"decimal": "cpp",
+			"fixpnt": "cpp",
+			"integer": "cpp",
+			"lns": "cpp",
+			"posit": "cpp",
+			"unum": "cpp"
+		}
+	}
+}

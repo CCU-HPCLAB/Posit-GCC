@@ -1,0 +1,33 @@
+1201 add
+
+addsf3.c
+divsf3.c
+eqsf2.c
+subsf3.c
+checked lesf2.c
+checked gesf2.c
+checked negsf2.c
+checked unordsf2.c
+checked extendsfdf2.c
+checked fixsfsi.c
+checked fixsfdi.c
+checked floatsisf.c
+checked floatdisf
+checked floatundisf
+checked floatunsisf
+checked fixunssfsi
+checked fixunssfdi
+
+
+1202 add
+checked fixsfti.c
+checked fixunssfti
+checked floattisf
+checked floatuntisf
+
+add:(strong alias)
+checked ltsf2.c //alias from lesf2.c
+checked nesf2.c //alias from eqsf2.c
+checked gtsf2.c //alias from gesf2.c
+
+checked cmpsf2.c //maybe needed
