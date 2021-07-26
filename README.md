@@ -1,5 +1,5 @@
 # Posit-GCC
-In this part, we implement Posit format in GCC. And we via compiler option fposit to switch IEEE 754 or Posit. You can reffer as below picture.
+We implement Posit format in GCC. And we via compiler option fposit to switch IEEE 754 or Posit. You can reffer as below picture.
 ![](https://i.imgur.com/wL1xBhe.png)
 
 Inorder to transform floating-point format, gcc via internal macro REAL_VALUE_TYPE to transform when parsing float senmatic statment. And in the assembly stage Posit format represent as decimal. The REAL_VALUE_TYPE lives in gcc/real.c and real.h. The architecture of compile float flow as below picture. 
@@ -9,8 +9,8 @@ In the work, we use software emulation Posit compute. GCC provides a low-level r
 ### How to build
 For x86-64, you can refer as following step to build GCC with Posit format in your machine.
 
-    > git clone https://github.com/linopeng/GCC-9.2.0-Porting
-    > cd GCC-9.2.0-Porting
+    > git clone https://github.com/pengsheng-chen/Posit-GCC
+    > cd Posit-GCC
     > mkdir build
     > cd build
     > ../configure --target=$TARGET --disable-nls --enable-languages=c,c++ --without-headers --prefix=/path/
@@ -23,7 +23,7 @@ For x86-64, you can refer as following step to build GCC with Posit format in yo
     > make clean
 Besides we need to build Posit library call libposit.a under gcc/libgcc/soft-fp folder. You can refer as following step that get the libposit.a library for Posit computing.
 
-    > cd GCC-9.2.0-Porting/libgcc/soft-fp-2/
+    > cd Posit-GCC/libgcc/soft-fp-2/
     > gcc -c -O2 -mno-sse -msoft-float -I../config/i386/ -I.. *.c
     > ar -crv libposit.a *.o
     > rm -f *.o
@@ -31,7 +31,7 @@ Besides we need to build Posit library call libposit.a under gcc/libgcc/soft-fp 
 ### Examples and Compile
 After above build compiler and library that you can test the example code to validate the works. 
 
-    > Posit-gcc -fposit -msoft-float example-code.c GCC-9.2.0-Porting/libgcc/soft-fp-2/libposit.a
+    > Posit-gcc -fposit -msoft-float example-code.c Posit-GCC/libgcc/soft-fp-2/libposit.a
 
 ```c=
 void main(){
@@ -42,6 +42,6 @@ void main(){
 }
 ```
 ## Refference work
-[Essential Abstractions in GCC '13](http://www.cse.iitb.ac.in/grc/gcc-workshop-13/index.php?page=slides)
-[Cerlane Leong - SoftPosit](https://gitlab.com/cerlane/SoftPosit)
-[stillwater-sc - universal](https://github.com/stillwater-sc/universal)
+[Essential Abstractions in GCC '13](http://www.cse.iitb.ac.in/grc/gcc-workshop-13/index.php?page=slides)  
+[Cerlane Leong - SoftPosit](https://gitlab.com/cerlane/SoftPosit)  
+[stillwater-sc - universal](https://github.com/stillwater-sc/universal)  
