@@ -1,4 +1,4 @@
-# Posit-GCC (GCC enabled Posit floating-pont format)
+# Posit-GCC (A Posit-enabled GCC compiler)
 We implement Posit format in GCC. And we via compiler option fposit to switch IEEE 754 or Posit. You can reffer as below picture.
 ![](https://i.imgur.com/wL1xBhe.png)
 
