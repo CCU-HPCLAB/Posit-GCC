@@ -2,7 +2,7 @@
 We implement Posit format in GCC. And we via compiler option fposit to switch IEEE 754 or Posit. You can reffer as below picture.
 ![](https://i.imgur.com/wL1xBhe.png)
 
-Inorder to transform floating-point format, gcc via internal macro REAL_VALUE_TYPE to transform when parsing float senmatic statment. And in the assembly stage Posit format represent as decimal. The REAL_VALUE_TYPE lives in gcc/real.c and real.h. The architecture of compile float flow as below picture. 
+Inorder to transform floating-point format, gcc via internal macro REAL_VALUE_TYPE to transform when parsing float senmatic statment. And in the assembly stage Posit format represent as decimal. The REAL_VALUE_TYPE lives in gcc/real.c and real.h. The architecture of compile float flow as below picture.  
 ![image](https://user-images.githubusercontent.com/51993200/125903994-78018b47-3b7b-44aa-bf10-73290237d3bf.png)
 
 In the work, we use software emulation Posit compute. GCC provides a low-level runtime library, libgcc.a or libgcc_s.so.1 on some platforms. GCC generates calls to routines in this library automatically, whenever it needs to perform some operation that is too complicated to emit inline code for. About the function implement under gcc/libgcc/soft-fp folder.
@@ -41,7 +41,6 @@ void main(){
     printf("Result A + B = %f\n", C); // Answer = 0.531
 }
 ```
-## Refference work
-[Essential Abstractions in GCC '13](http://www.cse.iitb.ac.in/grc/gcc-workshop-13/index.php?page=slides)  
+## Refference work 
 [Cerlane Leong - SoftPosit](https://gitlab.com/cerlane/SoftPosit)  
 [stillwater-sc - universal](https://github.com/stillwater-sc/universal)  
