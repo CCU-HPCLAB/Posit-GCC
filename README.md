@@ -13,7 +13,7 @@ For x86-64, you can refer as following step to build GCC with Posit format in yo
     > cd Posit-GCC
     > mkdir build
     > cd build
-    > ../configure --target=$TARGET --disable-nls --enable-languages=c,c++ --without-headers --prefix=/path/
+    > ../configure --target=$TARGET --disable-nls --enable-languages=c,c++ --without-headers --prefix=/path/ --disable-multilib
     > make all-gcc
     > make all-target-libgcc
     > make all-target-libstdc++-v3
